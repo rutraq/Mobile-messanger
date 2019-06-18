@@ -27,6 +27,7 @@ class Loginform(QtWidgets.QMainWindow, login.Ui_Dialog):
         try:
             if (int(self.lineEdit.text().__len__()) == 0) or (int(self.lineEdit_2.text().__len__()) == 0):
                 msgbox(msg="Введите данные", title="Login", ok_button="fuck go back")
+
             else:
                 vk_session = vk_api.VkApi(self.lineEdit.text(), self.lineEdit_2.text())
                 vk_session.auth()
